@@ -3,8 +3,13 @@ package dz.Hanimall.Lar.entities.creatures;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+<<<<<<< HEAD
+import dz.Hanimall.Lar.Game;
+
+=======
 import dz.Hanimall.Lar.def.Game;
 import dz.Hanimall.Lar.def.Master;
+>>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
 import dz.Hanimall.Lar.graphics.Animation;
 import dz.Hanimall.Lar.graphics.Assets;
 import dz.Hanimall.Lar.worlds.World;
@@ -17,13 +22,22 @@ public class Player extends MovingEntity {
 	//Animation
 	private Animation animLorann;
 	
+<<<<<<< HEAD
+	
+=======
 	private Game game;
+>>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
 
 	
 	
 	public Player(World world, Game game, float x, float y) {
+<<<<<<< HEAD
+		super(game, world, x, y, MovingEntity.DEFAULT_WIDTH, MovingEntity.DEFAULT_HEIGHT);
+		
+=======
 		super(world, x, y, MovingEntity.DEFAULT_WIDTH, MovingEntity.DEFAULT_HEIGHT);
 		this.game = game;
+>>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
 		
 		//Animation
 		animLorann = new Animation(100,Assets.lorann);

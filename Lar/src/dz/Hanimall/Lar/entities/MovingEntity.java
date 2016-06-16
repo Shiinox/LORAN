@@ -1,13 +1,7 @@
-package dz.Hanimall.Lar.entities.creatures;
+package dz.Hanimall.Lar.entities;
 
 import java.awt.Graphics;
 
-<<<<<<< HEAD
-import dz.Hanimall.Lar.Game;
-=======
-import dz.Hanimall.Lar.def.Master;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
-import dz.Hanimall.Lar.entities.Entity;
 import dz.Hanimall.Lar.tiles.Tile;
 import dz.Hanimall.Lar.worlds.World;
 
@@ -27,13 +21,8 @@ public abstract class MovingEntity extends Entity {
 	
 
 
-<<<<<<< HEAD
-	public MovingEntity(Game game, World world, float x, float y, int width, int height) {
-		super(game, world, x, y, width, height);
-=======
 	public MovingEntity(World world, float x, float y, int width, int height) {
 		super(world, x, y, width, height);
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
 		lives = DEFAULT_LIVES;
 		speed = DEFAULT_SPEED;
 		xMove = 0;
@@ -41,17 +30,9 @@ public abstract class MovingEntity extends Entity {
 	}
 
 	public void move(){
-<<<<<<< HEAD
-		if(!entityCollision(xMove, 0f))
-		moveX();
-		if(!entityCollision(0f, yMove))
-		moveY();
-		
-=======
 		moveX();
 		moveY();
 	
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
 	}
 	
 	
