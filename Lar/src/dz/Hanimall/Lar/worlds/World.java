@@ -2,11 +2,9 @@ package dz.Hanimall.Lar.worlds;
 
 import java.awt.Graphics;
 
-<<<<<<< HEAD
 
-=======
-import dz.Hanimall.Lar.entities.EntityManager;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
+
 import dz.Hanimall.Lar.tiles.Tile;
 import dz.Hanimall.Lar.utils.Utils;
 
@@ -38,9 +36,6 @@ public class World {
 	}
 	
 	public Tile getTile(int x, int y){
-		if(x < 0 || y < 0 || x >= width || y >= height)
-			return Tile.theVoidTile;
-		
 		
 		Tile t = Tile.tiles[tiles[x][y]];
 		if(t == null)

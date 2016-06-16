@@ -5,8 +5,7 @@ import java.awt.image.BufferedImage;
 
 
 import dz.Hanimall.Lar.Game;
-
-
+import dz.Hanimall.Lar.entities.Entity;
 import dz.Hanimall.Lar.graphics.Animation;
 import dz.Hanimall.Lar.graphics.Assets;
 import dz.Hanimall.Lar.worlds.World;
@@ -19,7 +18,7 @@ public class Player extends MovingEntity {
 	//Animation
 	private Animation animLorann;
 	
-
+	private int score;
 	private Game game;
 
 
@@ -32,7 +31,7 @@ public class Player extends MovingEntity {
 
 		
 		this.game = game;
-
+		score = 0;
 		
 		//Animation
 		animLorann = new Animation(100,Assets.lorann);
@@ -76,6 +75,25 @@ public class Player extends MovingEntity {
 		//g.fillRect((int)x, (int)y, bounds.width, bounds.height);
 	}
 	
+		@Override
+	public boolean entityCollision(float xX, float yY){
+		for (Entity e : game.getEntityManager().getEntities()){
+			if(e.equals(this))
+				continue;
+			
+			if(e.collisionBounds(0f, 0f).intersects(collisionBounds(xX, yY))){
+				if(e.getPoints() > 0 ){
+					score += e.getPoints();
+					game.getEntityManager().getEntities().remove(e);
+				}
+				return true;
+				
+			}
+		}
+		return false;
+	
+	}
+	
 	private BufferedImage getCurrentAnimationFrame (){
 		
 		
@@ -100,6 +118,10 @@ public class Player extends MovingEntity {
 		
 		
 		
+	}
+
+	public int getScore() {
+		return score;
 	}
 
 }

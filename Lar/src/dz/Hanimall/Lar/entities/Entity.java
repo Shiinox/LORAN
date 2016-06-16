@@ -19,7 +19,7 @@ public abstract class Entity {
 	protected World world;
 
 	protected Game game;
-
+	protected int points =0;
 	protected float x, y;
 	protected int width, height;
 	public Rectangle bounds;
@@ -91,6 +91,10 @@ public abstract class Entity {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+
+	public int getPoints() {
+		return points;
 	}
 
 	

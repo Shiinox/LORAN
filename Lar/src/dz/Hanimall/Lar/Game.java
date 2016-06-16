@@ -2,6 +2,7 @@ package dz.Hanimall.Lar;
 
 
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
@@ -9,6 +10,7 @@ import dz.Hanimall.Lar.entities.EntityManager;
 import dz.Hanimall.Lar.entities.creatures.Player;
 import dz.Hanimall.Lar.entities.creatures.Spell;
 import dz.Hanimall.Lar.entities.statics.DoorOpen;
+import dz.Hanimall.Lar.entities.statics.Gold;
 import dz.Hanimall.Lar.graphics.Assets;
 import dz.Hanimall.Lar.inputs.KeyManager;
 import dz.Hanimall.Lar.tiles.Tile;
@@ -77,6 +79,7 @@ public class Game implements Runnable {
 		entityManager.getPlayer().setX(world.getSpawnX());
 		entityManager.getPlayer().setY(world.getSpawnY());
 		entityManager.addEntity(new DoorOpen (this, world , 200,200));
+		entityManager.addEntity(new Gold (this, world, 50, 300));
 			
 	}
 	
@@ -140,13 +143,30 @@ public class Game implements Runnable {
 
 		//Draw Here!
 		
+		if((player.getScore()) == 0)
+			  g.setColor(Color.red);
+			else
+			  g.setColor(Color.green);
+
+		        // draw the time left string
+		        g.drawString("Your score: " + player.getScore(), 0, 0);
+		
+		
 		world.render(g);
 		entityManager.render(g);
 		if(spell !=null)
 			spell.render(g);
 		player.render(g);
 		
+	//Draw Here!
+		
+		if((player.getScore()) == 0)
+			  g.setColor(Color.red);
+			else
+			  g.setColor(Color.green);
 
+		        // draw the time left string
+		        g.drawString("Your score: " + player.getScore(), width - 150, height - 32);
 		
 		
 	
