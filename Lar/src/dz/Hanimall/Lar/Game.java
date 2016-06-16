@@ -11,6 +11,7 @@ import dz.Hanimall.Lar.entities.creatures.Spell;
 import dz.Hanimall.Lar.entities.statics.DoorOpen;
 import dz.Hanimall.Lar.graphics.Assets;
 import dz.Hanimall.Lar.inputs.KeyManager;
+import dz.Hanimall.Lar.tiles.Tile;
 import dz.Hanimall.Lar.view.View;
 import dz.Hanimall.Lar.worlds.World;
 
@@ -112,7 +113,7 @@ public class Game implements Runnable {
 		player.tick();
 		
 		getLastMove();
-		if(this.getKeyManager().space && spell == null ){
+		if(this.getKeyManager().space && spell == null && !player.collisionWithTile((int) (player.getX() + xSpawnn )/Tile.TILEWIDTH, (int)( player.getY() + ySpawnn) /Tile.TILEHEIGHT) ){
 		spell = new Spell( world, this, player.getX() + xSpawnn , player.getY() + ySpawnn , lastMove);
 		System.out.println(lastMove);
 		
@@ -163,7 +164,7 @@ public class Game implements Runnable {
 		
 		if (this.getKeyManager().down ){
 			xSpawnn = 0;
-			ySpawnn = player.getHeight() ;
+			ySpawnn = player.getHeight() +3 ;
 			lastMove = Move.Down;
 		}
 		if (this.getKeyManager().up){
@@ -177,7 +178,7 @@ public class Game implements Runnable {
 			lastMove = Move.Left;
 		}
 		if (this.getKeyManager().right){
-			xSpawnn = player.getWidth() ;
+			xSpawnn = player.getWidth() +3;
 			ySpawnn = 0;
 			lastMove = Move.Right;
 		}

@@ -3,11 +3,10 @@ package dz.Hanimall.Lar.entities;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-<<<<<<< HEAD
+
 import dz.Hanimall.Lar.Game;
-=======
-import dz.Hanimall.Lar.def.Game;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
+
 import dz.Hanimall.Lar.entities.creatures.Player;
 
 public class EntityManager {
@@ -22,11 +21,9 @@ public class EntityManager {
 		this.game = game;
 		this.player = player;
 		entities = new ArrayList<Entity>();
-<<<<<<< HEAD
+
 		//addEntity(player);
-=======
-		
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
 	}
 	
 	public void tick(){
@@ -34,11 +31,11 @@ public class EntityManager {
 			Entity e = entities.get(i);
 			e.tick();
 		}
-<<<<<<< HEAD
+
 			//player.tick();
-=======
-			player.tick();
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
+			
+
 		
 	}
 	
@@ -46,11 +43,11 @@ public class EntityManager {
 		for(Entity e : entities){
 			e.render(g);
 		}
-<<<<<<< HEAD
+
 			//player.render(g);
-=======
-			player.render(g);
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
+			
+
 		
 	}
 	

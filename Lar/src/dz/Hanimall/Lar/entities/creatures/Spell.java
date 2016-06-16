@@ -1,18 +1,15 @@
 package dz.Hanimall.Lar.entities.creatures;
 
 import java.awt.Graphics;
-<<<<<<< HEAD
+
 import java.awt.image.BufferedImage;
 import dz.Hanimall.Lar.Game;
 import dz.Hanimall.Lar.Move;
-=======
-import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 
-import dz.Hanimall.Lar.def.Game;
-import dz.Hanimall.Lar.def.Master;
-import dz.Hanimall.Lar.def.Move;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
+
+
+
 import dz.Hanimall.Lar.graphics.Animation;
 import dz.Hanimall.Lar.graphics.Assets;
 import dz.Hanimall.Lar.tiles.Tile;
@@ -23,11 +20,9 @@ public class Spell extends MovingEntity{
 	
 	
 	private Animation animSpell;
-<<<<<<< HEAD
-	
-=======
+
 	private Game game;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
 	private Move direction;
 	private boolean inLife = true;
 	
@@ -37,13 +32,12 @@ public class Spell extends MovingEntity{
 	
 	
 	public Spell( World world, Game game, float x, float y,Move direction) {
-<<<<<<< HEAD
 		super(game, world, x, y, MovingEntity.DEFAULT_WIDTH, MovingEntity.DEFAULT_HEIGHT);
 		
-=======
-		super(world, x, y, MovingEntity.DEFAULT_WIDTH, MovingEntity.DEFAULT_HEIGHT);
+
+		
 		this.game = game;
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
 		this.direction = direction;
 		
 		
@@ -87,7 +81,7 @@ public class Spell extends MovingEntity{
 	
 	
 	
-<<<<<<< HEAD
+
 		@Override
 	public void move(){
 			if(!entityCollision(xMove, 0f) && !playerCollision(xMove, 0f))
@@ -111,8 +105,7 @@ public class Spell extends MovingEntity{
 	}
 	
 	
-=======
->>>>>>> 2e98471451f9a6e590be1405d8a5abdbaa087ad0
+
 	
 		@Override
 	public void moveX(){
